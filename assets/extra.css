@@ -65,4 +65,47 @@
     background-color: var(--md-primary-fg-color);
     color: var(--md-primary-bg-color);
   }
+}
+
+/* 公众号展示样式 */
+.wechat-official-account {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wechat-official-account img {
+  display: block;
+  margin: 0 auto 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.wechat-official-account p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* 侧边栏公众号入口 */
+.md-sidebar__wechat {
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.md-sidebar__wechat-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+}
+
+.md-sidebar__wechat img {
+  width: 120px;
+  height: auto;
+  margin: 0 auto;
 } 
