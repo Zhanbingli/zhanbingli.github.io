@@ -70,42 +70,71 @@
 /* 公众号展示样式 */
 .wechat-official-account {
   background-color: #f8f9fa;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 25px;
   text-align: center;
-  margin: 20px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 25px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.wechat-official-account:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .wechat-official-account img {
   display: block;
   margin: 0 auto 15px;
   border: 1px solid #eee;
-  border-radius: 4px;
+  border-radius: 8px;
+  image-rendering: -webkit-optimize-contrast; /* 提高图片清晰度 */
+  image-rendering: crisp-edges;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .wechat-official-account p {
-  margin: 0;
+  margin: 10px 0 0;
   color: #555;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 /* 侧边栏公众号入口 */
 .md-sidebar__wechat {
-  padding: 15px;
-  margin-top: 20px;
+  padding: 15px 10px;
+  margin-top: 25px;
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.07);
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.md-sidebar__wechat:hover {
+  background-color: #f0f2f5;
 }
 
 .md-sidebar__wechat-title {
   font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 0.8rem;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: #333;
 }
 
 .md-sidebar__wechat img {
-  width: 120px;
+  width: 100px;
   height: auto;
   margin: 0 auto;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.md-sidebar__wechat-desc {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 8px;
 } 
