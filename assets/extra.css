@@ -4,9 +4,19 @@
   --md-code-font: "JetBrains Mono", monospace;
 }
 
+/* 暗黑模式切换动画 */
+[data-md-color-scheme] {
+  transition: all 0.4s ease;
+}
+
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
 /* 文章内容样式 */
 .md-content {
   line-height: 1.8;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .md-content h1 {
@@ -26,13 +36,35 @@
   display: block;
   margin: 1.5rem auto;
   max-width: 100%;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.md-content img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* 代码块样式 */
 .md-typeset pre {
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--md-primary-fg-color);
+}
+
+.md-typeset pre:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.md-typeset code {
+  transition: all 0.2s ease;
+}
+
+.md-typeset pre:hover code {
+  color: var(--md-code-hl-keyword-color);
 }
 
 /* 引用块样式 */
@@ -214,4 +246,228 @@
 .back-to-top:hover {
   opacity: 1;
   transform: translateY(-3px);
+}
+
+/* 鼠标点击特效 */
+.click-effect {
+  position: absolute;
+  font-size: 20px;
+  pointer-events: none;
+  animation: float 1s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 页面切换动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 链接悬停效果 */
+.md-content__inner a:not(.md-button) {
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.md-content__inner a:not(.md-button)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--md-accent-fg-color);
+  transition: width 0.3s ease;
+}
+
+.md-content__inner a:not(.md-button):hover::after {
+  width: 100%;
+}
+
+/* 有趣的引用样式 */
+.fun-quote {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.fun-quote blockquote {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  border-left: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: rotate(-1deg);
+  transition: all 0.3s ease;
+}
+
+.fun-quote blockquote:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.fun-quote blockquote p {
+  margin: 0;
+  font-style: normal;
+}
+
+/* 有趣的事实样式 */
+.fun-facts {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 2rem 0;
+  border-left: 4px solid var(--md-primary-fg-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.fun-facts:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fun-facts h3 {
+  color: var(--md-primary-fg-color);
+  margin-top: 0;
+}
+
+.fun-facts ul {
+  margin-bottom: 0;
+}
+
+.fun-facts li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.fun-facts li::before {
+  content: '✨';
+  position: absolute;
+  left: 0;
+  color: var(--md-accent-fg-color);
+}
+
+/* 404页面样式 */
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: bold;
+  color: var(--md-primary-fg-color);
+  line-height: 1;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.error-message {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.error-animation {
+  position: relative;
+  height: 150px;
+  margin: 2rem 0;
+}
+
+.spaceship {
+  position: absolute;
+  font-size: 3rem;
+  left: 10%;
+  animation: fly 10s linear infinite;
+}
+
+.astronaut {
+  position: absolute;
+  font-size: 2rem;
+  left: 40%;
+  animation: float 5s ease-in-out infinite;
+}
+
+.planet {
+  position: absolute;
+  font-size: 4rem;
+  right: 10%;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(400%) translateY(-50px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 } 

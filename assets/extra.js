@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // 添加打字机效果
+  const mainTitle = document.querySelector('.md-content__inner h1');
+  if (mainTitle && window.location.pathname === '/' || window.location.pathname === '/index.html') {
+    const originalText = mainTitle.textContent;
+    mainTitle.textContent = '';
+    let i = 0;
+    
+    function typeWriter() {
+      if (i < originalText.length) {
+        mainTitle.textContent += originalText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    
+    typeWriter();
+  }
+  
+  // 添加鼠标悬停动画
+  const articleLinks = document.querySelectorAll('.md-content__inner a');
+  articleLinks.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+      this.style.transition = 'all 0.3s ease';
+      this.style.transform = 'translateX(5px)';
+    });
+    
+    link.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateX(0)';
+    });
+  });
+
   // 只在文章页面添加评论系统
   if (document.querySelector('.md-content__inner h1')) {
     // 创建评论区容器
@@ -64,5 +95,25 @@ document.addEventListener('DOMContentLoaded', function() {
       top: 0,
       behavior: 'smooth'
     });
+  });
+  
+  // 添加鼠标点击特效
+  document.addEventListener('click', function(e) {
+    const heart = document.createElement('div');
+    heart.className = 'click-effect';
+    heart.style.top = (e.pageY - 10) + 'px';
+    heart.style.left = (e.pageX - 10) + 'px';
+    
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    heart.style.color = randomColor;
+    
+    const randomEmoji = ['❤️', '🌟', '✨', '💫', '🎉', '🔥', '👍', '😊'][Math.floor(Math.random() * 8)];
+    heart.textContent = randomEmoji;
+    
+    document.body.appendChild(heart);
+    
+    setTimeout(function() {
+      heart.remove();
+    }, 1000);
   });
 }); 
