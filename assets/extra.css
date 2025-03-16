@@ -69,7 +69,7 @@
 
 /* 公众号展示样式 */
 .wechat-official-account {
-  background-color: #f8f9fa;
+  background-color: #f0f7ff;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
@@ -79,12 +79,13 @@
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #e0e0e0;
+  border: 2px solid #c0d6f9;
 }
 
 .wechat-official-account:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #a0c0f0;
 }
 
 .wechat-official-account img {
