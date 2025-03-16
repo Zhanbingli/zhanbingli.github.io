@@ -1,0 +1,68 @@
+/* 自定义字体 */
+:root {
+  --md-text-font: "Noto Sans SC", "Roboto", sans-serif;
+  --md-code-font: "JetBrains Mono", monospace;
+}
+
+/* 文章内容样式 */
+.md-content {
+  line-height: 1.8;
+}
+
+.md-content h1 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.md-content h2 {
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-content img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 代码块样式 */
+.md-typeset pre {
+  border-radius: 4px;
+}
+
+/* 引用块样式 */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding-left: 1rem;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+}
+
+/* 表格样式 */
+.md-typeset table:not([class]) {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color--light);
+  color: var(--md-primary-bg-color);
+}
+
+/* 页脚样式 */
+.md-footer {
+  margin-top: 2rem;
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+  }
+} 

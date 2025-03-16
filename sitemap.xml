@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://zhanbingli.github.io/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://zhanbingli.github.io/404/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://zhanbingli.github.io/about/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://zhanbingli.github.io/life/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://zhanbingli.github.io/life/travel-thoughts/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://zhanbingli.github.io/tech/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://zhanbingli.github.io/tech/docker-containerization/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://zhanbingli.github.io/tech/python-data-analysis/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+</urlset>
