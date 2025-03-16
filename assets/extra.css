@@ -70,34 +70,37 @@
 /* 公众号展示样式 */
 .wechat-official-account {
   background-color: #f8f9fa;
-  border-radius: 12px;
-  padding: 25px;
+  border-radius: 10px;
+  padding: 20px;
   text-align: center;
-  margin: 25px 0;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .wechat-official-account:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .wechat-official-account img {
   display: block;
-  margin: 0 auto 15px;
+  margin: 0 auto 12px;
   border: 1px solid #eee;
-  border-radius: 8px;
+  border-radius: 6px;
   image-rendering: -webkit-optimize-contrast; /* 提高图片清晰度 */
   image-rendering: crisp-edges;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .wechat-official-account p {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   color: #555;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 /* 侧边栏公众号入口 */
