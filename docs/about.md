@@ -2,17 +2,16 @@
 
 ## 个人简介
 
-我是李占兵，一名热爱技术的开发者。
+大家好，我是李占兵，一名热爱技术的全栈开发者。
 
-## 专业技能
+## 技术栈
 
-- 编程语言：Python, JavaScript, Java
-- 前端技术：HTML, CSS, React
-- 后端技术：Django, Flask, Spring Boot
-- 数据库：MySQL, MongoDB
-- 其他：Git, Docker
+- **前端**：HTML, CSS, JavaScript, Vue, React
+- **后端**：Python, Node.js, Java
+- **数据库**：MySQL, MongoDB
+- **其他**：Docker, Git, Linux
 
 ## 联系方式
 
-- GitHub: [zhanbingli](https://github.com/zhanbingli)
-- Twitter: [@zhanbingli](https://twitter.com/zhanbingli)
+- **GitHub**：[https://github.com/zhanbingli](https://github.com/zhanbingli)
+- **邮箱**：contact@zhanbingli.com

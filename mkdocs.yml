@@ -1,5 +1,5 @@
-site_name: 我留在世界上的痕迹
-site_url: https://zhanbingli.github.io/
+site_name: 李占兵的博客
+site_url: https://zhanbingli.github.io
 site_author: 李占兵
 site_description: 个人知识分享与技术博客
 
@@ -8,7 +8,7 @@ repo_name: zhanbingli/zhanbingli.github.io
 repo_url: https://github.com/zhanbingli/zhanbingli.github.io
 
 # Copyright
-copyright: Copyright &copy; 2025 李占兵
+copyright: Copyright &copy; 2024 李占兵
 
 # Configuration
 theme:
@@ -32,95 +32,20 @@ theme:
         icon: material/brightness-4
         name: 切换到亮色模式
   features:
-    # 导航设置
     - navigation.instant
-    - navigation.tracking
     - navigation.tabs
     - navigation.top
-    # 搜索设置
     - search.suggest
-    - search.highlight
-    # 界面设置
-    - content.code.copy
-  icon:
-    repo: fontawesome/brands/github
-  font:
-    text: Roboto
-    code: Roboto Mono
   favicon: assets/favicon.svg
   logo: assets/logo.svg
-  custom_dir: docs/overrides
 
-# 首页与内容设置
+# 内容设置
 docs_dir: docs
 use_directory_urls: true
-
-# CSS 和 JavaScript 设置
-extra_css:
-  - stylesheets/extra.css
-extra_javascript:
-  - javascripts/extra.js
 
 # Plugins
 plugins:
   - search
-  - minify:
-      minify_html: true
-  # 删除不必要的 tags 插件
-  # 删除 blog 插件
-  # 删除 rss 插件
-  # 禁用 social 插件
-
-# Customization
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Zhanbingli
-  consent:
-    title: Cookie 同意
-    description: >-
-      我们使用 cookies 来识别您的重复访问和偏好，以及
-      测量我们文档的有效性以及用户是否找到他们要找的内容。
-      在您的同意下，您正在帮助我们改进我们的网站。
-    actions:
-      - accept
-      - reject
-      - manage
-  authors:
-    zhanbingli:
-      name: 李占兵
-      description: 网站作者
-
-# Extensions
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.emoji
-  - admonition
-  - pymdownx.details
-  - pymdownx.tabbed:
-      alternate_style: true
-  - tables
-  - footnotes
-  - attr_list
-  - md_in_html
-  - def_list
-  - pymdownx.tasklist:
-      custom_checkbox: true
 
 # Page tree
 nav:
