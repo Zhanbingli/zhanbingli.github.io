@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<!-- 阅读进度条 -->
+<div class="progress-bar"></div>
+
+{% if page.meta and page.meta.homepage %}
+  <!-- 如果是首页，显示自定义首页模板 -->
+  {% include "home.html" %}
+{% else %}
+  <!-- 其他页面显示正常内容 -->
+  {{ super() }}
+{% endif %}
+{% endblock %}

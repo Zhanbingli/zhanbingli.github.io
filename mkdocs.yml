@@ -14,47 +14,57 @@ copyright: Copyright &copy; 2025 李占兵
 theme:
   name: material
   language: zh
-  features:
-    - navigation.tabs
-    - navigation.top
-    - navigation.indexes
-    - navigation.sections
-    - navigation.tracking
-    - header.autohide
-    - search.suggest
-    - search.highlight
-    - content.tabs.link
-    - toc.follow
-    - toc.integrate
-    - content.code.copy
-    - content.action.edit
-    - navigation.footer
-    - navigation.top
-    - toc.follow
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    # 亮色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep orange
       toggle:
         icon: material/brightness-7
         name: 切换到暗色模式
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+    # 暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep orange
       toggle:
         icon: material/brightness-4
         name: 切换到亮色模式
+  features:
+    # 导航设置
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    # 搜索设置
+    - search.suggest
+    - search.highlight
+    # 界面设置
+    - header.autohide
+    - content.code.copy
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
-  icon:
-    logo: material/book-open-page-variant
-  extra_css:
-    - stylesheets/extra.css
-  extra_javascript:
-    - javascripts/extra.js
-  custom_dir: theme
+  favicon: assets/favicon.svg
+  logo: assets/favicon.svg
+  custom_dir: docs/overrides
+
+# 首页与内容设置
+docs_dir: docs
+use_directory_urls: true
+
+# CSS 和 JavaScript 设置
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
 
 # Plugins
 plugins:
@@ -74,9 +84,6 @@ plugins:
       match_path: blog/posts/.*
       date_from_meta:
         as_creation: date
-      categories:
-        - categories
-        - tags
 
 # Customization
 extra:
