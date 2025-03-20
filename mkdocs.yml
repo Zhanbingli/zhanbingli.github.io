@@ -84,12 +84,13 @@ plugins:
       match_path: blog/posts/.*
       date_from_meta:
         as_creation: date
-  - social:
-      cards_layout: default
-      cards_layout_options:
-        background_color: "#009688"
-        color: "#ffffff"
-      cards_dir: assets/images/social
+  # 禁用 social 插件，因为缺少系统级 Cairo 库
+  # - social:
+  #     cards_layout: default
+  #     cards_layout_options:
+  #       background_color: "#009688"
+  #       color: "#ffffff"
+  #     cards_dir: assets/images/social
 
 # Customization
 extra:
