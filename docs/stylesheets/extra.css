@@ -270,3 +270,104 @@
 [data-md-color-scheme="slate"] .md-content h2 {
   border-bottom-color: rgba(255, 255, 255, 0.1);
 }
+
+/* 自定义Logo尺寸 */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.8rem !important;
+  width: auto !important;
+}
+
+.md-header__title {
+  margin-left: 0.5rem;
+}
+
+/* 美化标题和文本样式 */
+.md-typeset h1 {
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  margin-top: 2.5rem;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* 改进代码块样式 */
+.md-typeset code {
+  border-radius: 4px;
+}
+
+.md-typeset pre > code {
+  padding: 1rem;
+}
+
+/* 卡片布局 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.grid.cards > * {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.grid.cards > *:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* 页脚美化 */
+.md-footer {
+  margin-top: 4rem;
+}
+
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+/* 首页特殊样式 */
+.md-content__inner:has(.homepage) {
+  padding-top: 0;
+  margin-top: -1.5rem;
+}
+
+.homepage h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* 404页面样式 */
+.md-typeset:has(h1:first-child:contains("页面未找到")) {
+  text-align: center;
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.md-typeset:has(h1:first-child:contains("页面未找到")) h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.md-typeset:has(h1:first-child:contains("页面未找到")) h2 {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+.md-typeset:has(h1:first-child:contains("页面未找到")) .grid {
+  max-width: 30rem;
+  margin: 2rem auto;
+}

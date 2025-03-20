@@ -53,7 +53,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: assets/favicon.svg
-  logo: assets/favicon.svg
+  logo: assets/logo.svg
   custom_dir: docs/overrides
 
 # 首页与内容设置
@@ -84,6 +84,12 @@ plugins:
       match_path: blog/posts/.*
       date_from_meta:
         as_creation: date
+  - social:
+      cards_layout: default
+      cards_layout_options:
+        background_color: "#009688"
+        color: "#ffffff"
+      cards_dir: assets/images/social
 
 # Customization
 extra:

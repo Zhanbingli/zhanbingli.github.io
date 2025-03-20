@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="60" viewBox="0 0 240 60">
+  <style>
+    text {
+      font-family: 'Noto Sans', Arial, sans-serif;
+      font-weight: 600;
+    }
+    .main-text {
+      font-size: 24px;
+      fill: #009688;
+    }
+    .sub-text {
+      font-size: 14px;
+      fill: #757575;
+    }
+    .icon {
+      fill: #009688;
+    }
+  </style>
+  <rect class="icon" x="5" y="10" width="40" height="40" rx="5" />
+  <text x="55" y="30" class="main-text">李占兵的博客</text>
+  <text x="55" y="48" class="sub-text">我留在世界上的痕迹</text>
+</svg> 

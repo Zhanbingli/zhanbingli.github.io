@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#009688"/>
+  <rect x="60" y="60" width="1080" height="510" fill="#ffffff" rx="10"/>
+  <style>
+    text {
+      font-family: 'Noto Sans', Arial, sans-serif;
+    }
+    .title {
+      font-size: 72px;
+      font-weight: 700;
+      fill: #009688;
+    }
+    .subtitle {
+      font-size: 36px;
+      font-weight: 400;
+      fill: #757575;
+    }
+    .author {
+      font-size: 24px;
+      font-weight: 400;
+      fill: #424242;
+    }
+  </style>
+  
+  <rect x="120" y="150" width="80" height="80" rx="8" fill="#009688"/>
+  <text x="220" y="200" class="title">李占兵的个人博客</text>
+  <text x="220" y="280" class="subtitle">我留在世界上的痕迹</text>
+  <text x="220" y="340" class="author">个人知识分享与技术博客</text>
+</svg> 
