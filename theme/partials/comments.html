@@ -1,0 +1,20 @@
+<!-- 评论区 -->
+{% if config.extra.disqus %}
+<div class="comments-section">
+  <h2>评论</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "{{ page.canonical_url }}";
+      this.page.identifier = "{{ page.canonical_url }}";
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://{{ config.extra.disqus }}.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>请启用JavaScript查看评论区</noscript>
+</div>
+{% endif %}

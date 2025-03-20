@@ -9,7 +9,18 @@ categories:
 tags:
   - 标签1
   - 标签2
+readtime: 5
 ---
+
+<!-- 文章头部元信息显示 -->
+<div class="article-meta">
+  <img class="author-avatar" src="https://github.com/zhanbingli.png" alt="作者头像">
+  <span class="author-name">zhanbingli</span>
+  <span class="meta-divider">|</span>
+  <span class="publish-date">{{ page.meta.date }}</span>
+  <span class="meta-divider">|</span>
+  <span class="read-time">阅读时间: {{ page.meta.readtime }} 分钟</span>
+</div>
 
 # 文章标题
 
@@ -21,11 +32,11 @@ tags:
 
 ## 引言
 
-这里是引言部分...
+在这里，您可以介绍文章的主题、背景和目的。引言应当简明扼要，吸引读者继续阅读。
 
 ## 正文
 
-这里是正文部分...
+在正文部分，您可以详细阐述文章的主要内容。可以分为多个子标题进行组织，使结构更加清晰。
 
 ### 小标题1
 
@@ -37,7 +48,7 @@ tags:
 
 ## 总结
 
-这里是总结部分...
+在总结部分，您可以重申文章的主要观点，并提出一些见解或建议。
 
 <!-- 注释：以下是一些常用的Markdown扩展功能示例 -->
 
@@ -99,3 +110,6 @@ graph TD
 这是==高亮文本==，这是~~删除线文本~~。
 
 这是^上标^文本，这是~下标~文本。
+
+<!-- 在文章底部引入社交分享按钮 -->
+{% include "partials/share.html" %}

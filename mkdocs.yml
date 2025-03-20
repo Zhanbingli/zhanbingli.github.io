@@ -16,22 +16,21 @@ theme:
   language: zh
   features:
     - navigation.tabs
-    - navigation.sections
     - navigation.top
-    - navigation.tracking
     - navigation.indexes
-    - navigation.footer
+    - navigation.sections
+    - navigation.tracking
+    - header.autohide
     - search.suggest
     - search.highlight
-    - search.share
     - content.tabs.link
-    - content.code.annotation
-    - content.code.copy
-    - content.action.edit
-    - content.action.view
     - toc.follow
     - toc.integrate
-    - header.autohide
+    - content.code.copy
+    - content.action.edit
+    - navigation.footer
+    - navigation.top
+    - toc.follow
   palette:
     - scheme: default
       primary: indigo
@@ -48,9 +47,14 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.svg
+  favicon: assets/favicon.png
   icon:
     logo: material/book-open-page-variant
+  extra_css:
+    - stylesheets/extra.css
+  extra_javascript:
+    - javascripts/extra.js
+  custom_dir: theme
 
 # Plugins
 plugins:
@@ -78,12 +82,22 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/zhanbingli
+      link: https://github.com/Zhanbingli
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/zhanbingli
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/zhanbingli
   analytics:
     provider: google
-    property: G-XELFMN0EV7
+    property: G-XXXXXXXXXX
+  # 启用 Disqus 评论系统
+  disqus: zhanbingli
+  # 启用社交分享
+  social_share:
+    - platform: twitter
+    - platform: facebook
+    - platform: linkedin
+    - platform: weibo
   consent:
     title: Cookie 同意
     description: >-

@@ -1,0 +1,168 @@
+/* 阅读进度条 */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #4285f4, #34a853, #fbbc05, #ea4335);
+  z-index: 1000;
+  width: 0%;
+  transition: width 0.2s ease;
+}
+
+/* 增强文章内容阅读体验 */
+.md-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.md-content p {
+  margin-bottom: 1.2em;
+}
+
+/* 优化代码块 */
+.md-typeset pre {
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 文章卡片样式 */
+.article-card {
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* 优化引用样式 */
+.md-typeset blockquote {
+  border-left: 4px solid #4285f4;
+  background-color: rgba(66, 133, 244, 0.05);
+  padding: 16px;
+  margin: 16px 0;
+}
+
+/* 图片增强 */
+.md-typeset img {
+  display: block;
+  margin: 24px auto;
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.md-typeset img:hover {
+  transform: scale(1.02);
+}
+
+/* 表格样式增强 */
+.md-typeset table {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.md-typeset table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+/* 反馈按钮 */
+.feedback-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #4285f4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 999;
+}
+
+.feedback-button:hover {
+  background-color: #3367d6;
+}
+
+/* 相关文章区域 */
+.related-posts {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.related-posts h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.related-post-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background-color: rgba(0, 0, 0, 0.02);
+  transition: background-color 0.2s;
+}
+
+.related-post-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* 文章元信息样式 */
+.article-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.article-meta .author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.article-meta .meta-divider {
+  margin: 0 8px;
+}
+
+/* 文章标题动效 */
+.md-typeset h1 {
+  position: relative;
+  display: inline-block;
+}
+
+.md-typeset h1::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(to right, #4285f4, #34a853);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s;
+}
+
+.md-typeset h1:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

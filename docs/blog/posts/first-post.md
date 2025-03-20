@@ -1,15 +1,26 @@
 ---
 title: 我的博客初体验
-date: 2025-03-20
+date: 2025-03-19
 authors:
   - zhanbingli
 categories:
   - 博客
-  - 体验
 tags:
-  - 写作
+  - 初体验
   - 分享
+  - 技术
+readtime: 3
 ---
+
+<!-- 文章头部元信息显示 -->
+<div class="article-meta">
+  <img class="author-avatar" src="https://github.com/zhanbingli.png" alt="作者头像">
+  <span class="author-name">zhanbingli</span>
+  <span class="meta-divider">|</span>
+  <span class="publish-date">{{ page.meta.date }}</span>
+  <span class="meta-divider">|</span>
+  <span class="read-time">阅读时间: {{ page.meta.readtime }} 分钟</span>
+</div>
 
 # 我的博客初体验
 
@@ -58,11 +69,14 @@ def hello_blog():
 - [ ] 优化移动端体验
 - [ ] 定期更新技术文章
 
-## 结语
+## 总结
 
-博客不仅是知识的分享平台，也是个人成长的见证。我期待在这里记录我的思考和进步，也希望这些内容能对读者有所帮助。
+通过搭建这个博客，我不仅学习了很多技术知识，也找到了一个分享自己想法和经验的平台。希望未来能在这里记录更多有价值的内容，与大家一起成长。
 
-如果你有任何建议或想法，欢迎在评论区留言或直接联系我。
+如果您有任何建议或者想法，欢迎在评论区留言或者通过社交媒体联系我。
+
+<!-- 在文章底部引入社交分享按钮 -->
+{% include "partials/share.html" %}
 
 ---
 

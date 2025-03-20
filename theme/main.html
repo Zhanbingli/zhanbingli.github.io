@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+<!-- 自定义进度条样式 -->
+<style>
+body {
+  position: relative;
+}
+</style>
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="progress-bar"></div>
+{{ super() }}
+{% if page and page.meta and not page.is_homepage %}
+    {% include "partials/comments.html" %}
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}

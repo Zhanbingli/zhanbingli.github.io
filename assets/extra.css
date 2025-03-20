@@ -1,0 +1,545 @@
+/* 自定义字体 */
+:root {
+  --md-text-font: "Noto Sans SC", "Roboto", sans-serif;
+  --md-code-font: "JetBrains Mono", monospace;
+}
+
+/* 暗黑模式切换动画 */
+[data-md-color-scheme] {
+  transition: all 0.4s ease;
+}
+
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* 文章内容样式 */
+.md-content {
+  line-height: 1.8;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.md-content h1 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.md-content h2 {
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-content img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.md-content img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 代码块样式 */
+.md-typeset pre {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--md-primary-fg-color);
+}
+
+.md-typeset pre:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.md-typeset code {
+  transition: all 0.2s ease;
+}
+
+.md-typeset pre:hover code {
+  color: var(--md-code-hl-keyword-color);
+}
+
+/* 引用块样式 */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding-left: 1rem;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+}
+
+/* 表格样式 */
+.md-typeset table:not([class]) {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color--light);
+  color: var(--md-primary-bg-color);
+}
+
+/* 页脚样式 */
+.md-footer {
+  margin-top: 2rem;
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+  }
+  
+  .wechat-official-account {
+    padding: 15px;
+    margin: 15px 0;
+    max-width: 100%;
+  }
+  
+  .wechat-official-account img {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .md-content h1 {
+    font-size: 1.6rem;
+  }
+  
+  .md-content h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* 公众号展示样式 */
+.wechat-official-account {
+  background-color: #f0f7ff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #c0d6f9;
+}
+
+.wechat-official-account:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #a0c0f0;
+}
+
+.wechat-official-account img {
+  display: block;
+  margin: 0 auto 12px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  image-rendering: -webkit-optimize-contrast; /* 提高图片清晰度 */
+  image-rendering: crisp-edges;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.wechat-official-account p {
+  margin: 8px 0 0;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* 侧边栏公众号入口 */
+.md-sidebar__wechat {
+  padding: 15px 10px;
+  margin-top: 25px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.md-sidebar__wechat:hover {
+  background-color: #f0f2f5;
+}
+
+.md-sidebar__wechat-title {
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.md-sidebar__wechat img {
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.md-sidebar__wechat-desc {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* 文章元数据样式 */
+.article-metadata {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.8rem;
+}
+
+.article-metadata .metadata-item {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.article-metadata .metadata-item svg {
+  margin-right: 0.3rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.back-to-top.visible {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/* 鼠标点击特效 */
+.click-effect {
+  position: absolute;
+  font-size: 20px;
+  pointer-events: none;
+  animation: float 1s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* 页面切换动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 链接悬停效果 */
+.md-content__inner a:not(.md-button) {
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.md-content__inner a:not(.md-button)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--md-accent-fg-color);
+  transition: width 0.3s ease;
+}
+
+.md-content__inner a:not(.md-button):hover::after {
+  width: 100%;
+}
+
+/* 有趣的引用样式 */
+.fun-quote {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.fun-quote blockquote {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  border-left: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: rotate(-1deg);
+  transition: all 0.3s ease;
+}
+
+.fun-quote blockquote:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.fun-quote blockquote p {
+  margin: 0;
+  font-style: normal;
+}
+
+/* 有趣的事实样式 */
+.fun-facts {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 2rem 0;
+  border-left: 4px solid var(--md-primary-fg-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.fun-facts:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fun-facts h3 {
+  color: var(--md-primary-fg-color);
+  margin-top: 0;
+}
+
+.fun-facts ul {
+  margin-bottom: 0;
+}
+
+.fun-facts li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.fun-facts li::before {
+  content: '✨';
+  position: absolute;
+  left: 0;
+  color: var(--md-accent-fg-color);
+}
+
+/* 404页面样式 */
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: bold;
+  color: var(--md-primary-fg-color);
+  line-height: 1;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.error-message {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.error-animation {
+  position: relative;
+  height: 150px;
+  margin: 2rem 0;
+}
+
+.spaceship {
+  position: absolute;
+  font-size: 3rem;
+  left: 10%;
+  animation: fly 10s linear infinite;
+}
+
+.astronaut {
+  position: absolute;
+  font-size: 2rem;
+  left: 40%;
+  animation: float 5s ease-in-out infinite;
+}
+
+.planet {
+  position: absolute;
+  font-size: 4rem;
+  right: 10%;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(400%) translateY(-50px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* 自定义暗黑模式切换按钮 */
+.theme-toggle {
+  position: fixed;
+  bottom: 6rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--md-primary-fg-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.theme-toggle-animate {
+  animation: themeToggleRotate 0.3s ease;
+}
+
+@keyframes themeToggleRotate {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.theme-toggle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+  position: absolute;
+  transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+[data-md-color-scheme="default"] .theme-toggle .sun-icon {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+[data-md-color-scheme="default"] .theme-toggle .moon-icon {
+  opacity: 1;
+  transform: rotate(0);
+}
+
+[data-md-color-scheme="slate"] .theme-toggle .sun-icon {
+  opacity: 1;
+  transform: rotate(0);
+}
+
+[data-md-color-scheme="slate"] .theme-toggle .moon-icon {
+  opacity: 0;
+  transform: rotate(-90deg);
+} 
