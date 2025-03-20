@@ -37,7 +37,8 @@ theme:
     - navigation.top
     - search.suggest
   favicon: assets/favicon.svg
-  logo: assets/icon.png
+  icon:
+    logo: material/library
 
 # 内容设置
 docs_dir: docs
