@@ -71,47 +71,16 @@ plugins:
   - search
   - minify:
       minify_html: true
-  - tags
-  - blog:
-      blog_dir: blog
-      post_dir: "{blog}/posts"
-      archive: true
-      categories: true
-      pagination: true
-      pagination_per_page: 5
-      authors_file: "{blog}/.authors.yml"
-  - rss:
-      match_path: blog/posts/.*
-      date_from_meta:
-        as_creation: date
-  # 禁用 social 插件，因为缺少系统级 Cairo 库
-  # - social:
-  #     cards_layout: default
-  #     cards_layout_options:
-  #       background_color: "#009688"
-  #       color: "#ffffff"
-  #     cards_dir: assets/images/social
+  # 删除不必要的 tags 插件
+  # 删除 blog 插件
+  # 删除 rss 插件
+  # 禁用 social 插件
 
 # Customization
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Zhanbingli
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/zhanbingli
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/zhanbingli
-  analytics:
-    provider: google
-    property: G-XXXXXXXXXX
-  # 启用 Disqus 评论系统
-  disqus: zhanbingli
-  # 启用社交分享
-  social_share:
-    - platform: twitter
-    - platform: facebook
-    - platform: linkedin
-    - platform: weibo
   consent:
     title: Cookie 同意
     description: >-
@@ -174,8 +143,6 @@ markdown_extensions:
 # Page tree
 nav:
   - 首页: index.md
-  - 博客:
-    - blog/index.md
   - 技术博客: 
     - 技术首页: tech/index.md
     - Python异步编程: tech/python-异步编程实践.md
@@ -183,6 +150,5 @@ nav:
   - 生活随笔: 
     - 生活首页: life/index.md
     - 旅行笔记: life/travel-notes.md
-  - 英语学习: english/index.md
   - 关于我: about.md
   - 标签: tags.md
