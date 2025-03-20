@@ -10,15 +10,21 @@
   transition: width 0.2s ease;
 }
 
-/* 增强文章内容阅读体验 */
-.md-content {
-  max-width: 800px;
-  margin: 0 auto;
+/* 优化文章阅读体验 */
+.md-content article {
+  font-size: 16px;
   line-height: 1.8;
 }
 
-.md-content p {
-  margin-bottom: 1.2em;
+.md-content article p {
+  margin-bottom: 1.2rem;
+}
+
+.md-content article img {
+  border-radius: 4px;
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
 }
 
 /* 优化代码块 */
@@ -27,142 +33,240 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 文章卡片样式 */
-.article-card {
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 24px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.article-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-/* 优化引用样式 */
-.md-typeset blockquote {
-  border-left: 4px solid #4285f4;
-  background-color: rgba(66, 133, 244, 0.05);
-  padding: 16px;
-  margin: 16px 0;
-}
-
-/* 图片增强 */
-.md-typeset img {
-  display: block;
-  margin: 24px auto;
-  max-width: 100%;
+/* 优化表格 */
+.md-typeset table:not([class]) {
   border-radius: 4px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.md-typeset img:hover {
-  transform: scale(1.02);
-}
-
-/* 表格样式增强 */
-.md-typeset table {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
-.md-typeset table th {
-  background-color: #f5f5f5;
-  font-weight: 600;
-}
-
-/* 反馈按钮 */
-.feedback-button {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: #4285f4;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  z-index: 999;
-}
-
-.feedback-button:hover {
-  background-color: #3367d6;
-}
-
-/* 相关文章区域 */
-.related-posts {
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
-}
-
-.related-posts h2 {
-  font-size: 1.4rem;
-  margin-bottom: 16px;
-}
-
-.related-post-item {
-  display: flex;
-  align-items: center;
+.md-typeset table:not([class]) th {
+  background-color: rgba(0, 0, 0, 0.04);
   padding: 12px 16px;
-  border-radius: 4px;
-  margin-bottom: 8px;
+}
+
+/* 自定义引用块 */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding: 8px 16px;
   background-color: rgba(0, 0, 0, 0.02);
-  transition: background-color 0.2s;
+  border-radius: 0 4px 4px 0;
 }
 
-.related-post-item:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* 文章元信息样式 */
+/* 文章元信息 */
 .article-meta {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
-  font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.54);
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--md-default-fg-color--light);
 }
 
-.article-meta .author-avatar {
+.author-avatar {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
-.article-meta .meta-divider {
+.meta-divider {
   margin: 0 8px;
 }
 
-/* 文章标题动效 */
-.md-typeset h1 {
-  position: relative;
-  display: inline-block;
+/* 分享按钮样式 */
+.share-buttons {
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
 
-.md-typeset h1::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: -4px;
+.share-buttons h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+/* 图片放大效果 */
+.zoomable {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.zoomable:hover {
+  transform: scale(1.02);
+}
+
+.image-overlay {
+  position: fixed;
+  top: 0;
   left: 0;
-  background: linear-gradient(to right, #4285f4, #34a853);
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
 }
 
-.md-typeset h1:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+.zoomed-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* 整体页面布局优化 */
+.md-grid {
+  max-width: 1200px;
+}
+
+/* 优化导航栏 */
+.md-header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 优化文章内容区域 */
+.md-content {
+  padding: 0 1.5rem;
+}
+
+.md-content__inner {
+  margin: 0 auto;
+  padding: 2rem 0;
+  max-width: 850px;
+}
+
+/* 优化文章标题 */
+.md-content h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--md-primary-fg-color);
+}
+
+.md-content h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.07);
+}
+
+.md-content h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* 优化文章正文 */
+.md-content p {
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* 优化列表样式 */
+.md-content ul, .md-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.md-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* 优化表格样式 */
+.md-typeset table:not([class]) {
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  padding: 0.8rem;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.8rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 优化代码块 */
+.md-content pre {
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.md-content code {
+  font-family: "Roboto Mono", monospace;
+  border-radius: 4px;
+}
+
+/* 优化引用块 */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding-left: 1.2rem;
+  margin: 1.5rem 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* 优化卡片样式 */
+.md-typeset .admonition {
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+}
+
+/* 首页特殊样式 */
+.md-content__inner:not(.md-typeset) > h1 {
+  color: var(--md-primary-fg-color);
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* 博客文章卡片样式 */
+.blog-post-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.blog-post-card h3 {
+  margin-top: 0;
+}
+
+/* 深色模式适配 */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #1a1a2e;
+}
+
+[data-md-color-scheme="slate"] .md-content p,
+[data-md-color-scheme="slate"] .md-content li {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+[data-md-color-scheme="slate"] .blog-post-card {
+  background-color: #2a2a3c;
+}
+
+[data-md-color-scheme="slate"] .md-content h2 {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
 }
