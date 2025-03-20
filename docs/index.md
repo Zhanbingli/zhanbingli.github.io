@@ -1,26 +1,52 @@
 ---
-title: 我留在世界上的痕迹
-homepage: true
+title: 李占兵的个人博客
+description: 记录技术学习和生活感悟
 ---
 
-# 欢迎来到我的博客
+# 李占兵的个人博客
 
-这是李占兵的个人博客，记录我的技术学习和生活感悟。
+<div class="grid cards" markdown>
 
-## 主要内容
+- :fontawesome-solid-code: **技术博客**  
+  分享我在编程和技术领域的学习心得和实践经验
+  
+- :fontawesome-solid-mountain-sun: **生活随笔**  
+  记录旅行见闻、读书感悟和生活中的点滴思考
 
-* **技术博客** - 分享我在编程和技术方面的学习心得
-* **生活随笔** - 记录生活中的点滴感悟
+</div>
 
-## 最新文章
+## 📝 最新文章
 
-* [Python异步编程实践](/tech/python-异步编程实践/) - 探索Python中的异步编程
-* [如何写博客文章](/tech/how-to-write-blog/) - 了解如何为本站写文章
-* [旅行笔记](/life/travel-notes/) - 记录旅行中的美好瞬间
+<div class="grid" markdown>
 
-## 关于我
+<div class="card" markdown>
 
-我是一名热爱技术的开发者，欢迎访问[关于我](/about/)页面了解更多信息。
+### [Python异步编程实践](/tech/python-异步编程实践/)
+
+探索Python中的异步编程原理，学习使用asyncio提高I/O密集型应用性能
+
+[:octicons-arrow-right-24: 阅读更多](/tech/python-异步编程实践/)
+
+</div>
+
+<div class="card" markdown>
+
+### [旅行笔记](/life/travel-notes/)
+
+记录在旅途中的所见所闻，分享旅行中的美好瞬间和感悟
+
+[:octicons-arrow-right-24: 阅读更多](/life/travel-notes/)
+
+</div>
+
+</div>
+
+## 💡 关于我
+
+我是一名热爱技术的全栈开发者，专注于Web应用开发和数据处理。平时喜欢探索新技术，记录学习心得，也热爱旅行和阅读。
+
+[:octicons-person-24: 了解更多](/about/){ .md-button }
+[:octicons-mark-github-16: GitHub](https://github.com/zhanbingli){ .md-button }
 
 ## 关于本站
 

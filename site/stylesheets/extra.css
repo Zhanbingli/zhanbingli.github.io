@@ -371,3 +371,72 @@
   max-width: 30rem;
   margin: 2rem auto;
 }
+
+/* 卡片样式美化 */
+.md-typeset .grid {
+  grid-gap: .4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  margin: 1em 0;
+}
+
+.md-typeset .card {
+  background-color: var(--md-default-bg-color);
+  border-radius: 0.2rem;
+  box-shadow: var(--md-shadow-z1);
+  display: flex;
+  flex-direction: column;
+  font-size: .8rem;
+  justify-content: space-between;
+  margin: 0;
+  min-height: 6rem;
+  padding: 1rem;
+  transition: box-shadow 125ms;
+}
+
+.md-typeset .card:hover {
+  box-shadow: var(--md-shadow-z2);
+  transition-duration: 0ms;
+}
+
+.md-typeset .card h3 {
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+/* 改进按钮样式 */
+.md-button {
+  color: var(--md-primary-fg-color);
+  border: 1px solid var(--md-primary-fg-color);
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.md-button:hover {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+/* 在深色模式下调整卡片样式 */
+[data-md-color-scheme="slate"] .md-typeset .card {
+  background-color: var(--md-default-bg-color--lightest);
+}
+
+/* 改进首页布局 */
+.md-typeset {
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+  font-weight: 500;
+  margin: 1.5em 0 0.8em;
+}
+
+@media screen and (min-width: 60em) {
+  .md-sidebar--secondary:not([hidden]) {
+    display: none;
+  }
+}
