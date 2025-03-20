@@ -5,30 +5,23 @@ document.addEventListener('DOMContentLoaded', function() {
   initSmoothScroll();
   initCodeCopy();
   detectColorScheme();
+  estimateReadingTime();
+  addImageLoadingAnimation();
+  initMobileToc();
+  addCodeCopyButtons();
 });
 
 // 阅读进度条功能
 function initReadingProgressBar() {
-  const progressBar = document.querySelector('.progress-bar');
-  if (!progressBar) return;
+  const progressBar = document.createElement('div');
+  progressBar.className = 'progress-bar';
+  document.body.appendChild(progressBar);
 
   window.addEventListener('scroll', function() {
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-    const clientHeight = document.documentElement.clientHeight || window.innerHeight;
-    const scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
-    
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
     progressBar.style.width = scrolled + '%';
-    
-    // 当滚动超过一定高度时显示返回顶部按钮
-    const backToTopBtn = document.getElementById('back-to-top');
-    if (backToTopBtn) {
-      if (scrollTop > 300) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
-      }
-    }
   });
 }
 
@@ -171,5 +164,75 @@ function detectColorScheme() {
     if (!localStorage.getItem('theme')) {
       document.body.setAttribute('data-md-color-scheme', e.matches ? 'slate' : 'default');
     }
+  });
+}
+
+// 文章阅读时间估算
+function estimateReadingTime() {
+  const article = document.querySelector('.md-content article');
+  if (!article) return;
+
+  const text = article.textContent;
+  const wordsPerMinute = 200;
+  const words = text.trim().split(/\s+/).length;
+  const minutes = Math.ceil(words / wordsPerMinute);
+
+  const readingTime = document.createElement('span');
+  readingTime.className = 'reading-time';
+  readingTime.textContent = `${minutes} 分钟阅读`;
+
+  const meta = document.querySelector('.article-meta');
+  if (meta) {
+    meta.appendChild(readingTime);
+  }
+}
+
+// 图片加载动画
+function addImageLoadingAnimation() {
+  const images = document.querySelectorAll('.md-content img');
+  images.forEach(img => {
+    img.style.opacity = '0';
+    img.style.transition = 'opacity 0.3s ease';
+    
+    img.onload = function() {
+      img.style.opacity = '1';
+    };
+  });
+}
+
+// 移动端目录切换
+function initMobileToc() {
+  const tocToggle = document.createElement('button');
+  tocToggle.className = 'toc-toggle';
+  tocToggle.innerHTML = '☰';
+  document.body.appendChild(tocToggle);
+
+  const toc = document.querySelector('.md-nav--secondary');
+  if (!toc) return;
+
+  tocToggle.addEventListener('click', function() {
+    toc.classList.toggle('show');
+  });
+}
+
+// 代码块复制按钮
+function addCodeCopyButtons() {
+  const codeBlocks = document.querySelectorAll('pre code');
+  codeBlocks.forEach(block => {
+    const button = document.createElement('button');
+    button.className = 'md-clipboard';
+    button.innerHTML = '复制';
+    button.addEventListener('click', async function() {
+      try {
+        await navigator.clipboard.writeText(block.textContent);
+        button.innerHTML = '已复制！';
+        setTimeout(() => {
+          button.innerHTML = '复制';
+        }, 2000);
+      } catch (err) {
+        console.error('复制失败:', err);
+      }
+    });
+    block.parentNode.appendChild(button);
   });
 }
