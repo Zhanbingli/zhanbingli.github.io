@@ -36,17 +36,12 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.tabs
-    - navigation.expand
-    - navigation.indexes
     - navigation.top
-    - toc.follow
     # 搜索设置
     - search.suggest
     - search.highlight
     # 界面设置
-    - header.autohide
     - content.code.copy
-    - content.action.edit
   icon:
     repo: fontawesome/brands/github
   font:
@@ -91,19 +86,6 @@ extra:
       - accept
       - reject
       - manage
-  feedback:
-    title: 这个页面有帮助吗？
-    ratings:
-      - icon: material/emoticon-happy-outline
-        name: 这个页面有帮助
-        data: 1
-        note: >-
-          感谢您的反馈！
-      - icon: material/emoticon-sad-outline
-        name: 这个页面需要改进
-        data: 0
-        note: >- 
-          感谢您的反馈！请告诉我们如何改进。
   authors:
     zhanbingli:
       name: 李占兵
@@ -151,4 +133,3 @@ nav:
     - 生活首页: life/index.md
     - 旅行笔记: life/travel-notes.md
   - 关于我: about.md
-  - 标签: tags.md
