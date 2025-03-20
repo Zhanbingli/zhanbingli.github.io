@@ -54,6 +54,7 @@ nav:
     - 技术首页: tech/index.md
     - Python异步编程: tech/python-异步编程实践.md
     - Markdown指南: tech/markdown-guide.md
+    - 如何写博客文章: tech/how-to-write-blog.md
   - 生活随笔: 
     - 生活首页: life/index.md
     - 旅行笔记: life/travel-notes.md
