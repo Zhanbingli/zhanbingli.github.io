@@ -4,13 +4,21 @@ title: 技术博客
 
 # 技术博客
 
-在这里，我会分享我在技术领域的学习心得、项目经验和最佳实践。主要涵盖以下几个方面：
+在这里，我分享我在编程和技术领域的学习笔记、经验总结和项目实践。
 
-- Web 开发
-- Python 编程
-- 数据分析与可视化
-- DevOps 实践
-- 新技术探索
+## 文章列表
+
+- [Python异步编程实践](python-异步编程实践.md) - 探索Python中的异步编程
+- [如何写博客文章](how-to-write-blog.md) - 学习如何为本站写文章
+
+## 技术栈
+
+我主要关注以下技术领域：
+
+- **后端开发**: Python, Java, Node.js
+- **前端开发**: HTML, CSS, JavaScript, Vue
+- **数据库**: MySQL, MongoDB
+- **DevOps**: Docker, Git, Linux
 
 ## 最新文章
 
@@ -31,29 +39,6 @@ Python 是我最常用的编程语言之一，这个系列将分享 Python 编�
 Web 开发是当今最流行的软件开发领域之一，这个系列将探讨现代 Web 开发的各个方面。
 
 - 更多文章即将推出...
-
-## 技术栈
-
-以下是我经常使用的技术栈：
-
-<div class="grid cards" markdown>
-
-- ![Python](https://www.python.org/static/community_logos/python-logo-generic.svg)
-  **Python**
-  
-  用于数据分析、Web 后端和自动化脚本
-
-- ![JavaScript](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png)
-  **JavaScript**
-  
-  用于 Web 前端和 Node.js 应用开发
-
-- ![Docker](https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png)
-  **Docker**
-  
-  用于容器化应用和微服务架构
-
-</div>
 
 ## 学习资源
 

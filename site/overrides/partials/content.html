@@ -1,9 +1,0 @@
-{{ page.content }}
-
-{% if page and not page.meta.hide_comments and not page.is_homepage %}
-<div class="comments-wrapper">
-  {% if config.extra.disqus %}
-    {% include "partials/comments.html" %}
-  {% endif %}
-</div>
-{% endif %}

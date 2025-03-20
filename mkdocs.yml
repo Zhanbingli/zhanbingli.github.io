@@ -37,7 +37,7 @@ theme:
     - navigation.top
     - search.suggest
   favicon: assets/favicon.svg
-  logo: assets/logo.svg
+  logo: assets/icon.png
 
 # 内容设置
 docs_dir: docs
@@ -53,7 +53,6 @@ nav:
   - 技术博客: 
     - 技术首页: tech/index.md
     - Python异步编程: tech/python-异步编程实践.md
-    - Markdown指南: tech/markdown-guide.md
     - 如何写博客文章: tech/how-to-write-blog.md
   - 生活随笔: 
     - 生活首页: life/index.md

@@ -18,7 +18,7 @@
         <link rel="prev" href="../">
       
       
-        <link rel="next" href="../markdown-guide/">
+        <link rel="next" href="../how-to-write-blog/">
       
       
       <link rel="icon" href="../../assets/favicon.svg">
@@ -94,7 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="李占兵的博客" class="md-header__button md-logo" aria-label="李占兵的博客" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  <img src="../../assets/icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -311,7 +311,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="李占兵的博客" class="md-nav__button md-logo" aria-label="李占兵的博客" data-md-component="logo">
       
-  <img src="../../assets/logo.svg" alt="logo">
+  <img src="../../assets/icon.png" alt="logo">
 
     </a>
     李占兵的博客
@@ -485,7 +485,16 @@
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      核心概念
+      什么是异步编程？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python中的异步编程
     </span>
   </a>
   
@@ -497,28 +506,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#asyncio" class="md-nav__link">
     <span class="md-ellipsis">
-      基本示例
+      asyncio 基本使用
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="基本示例">
+    <nav class="md-nav" aria-label="asyncio 基本使用">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建协程
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      简单的异步函数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      并发执行多个协程
+      并发运行多个协程
     </span>
   </a>
   
@@ -530,7 +539,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       实际应用案例
     </span>
@@ -540,7 +549,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       异步网络请求
     </span>
@@ -549,7 +558,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       异步文件操作
     </span>
@@ -563,16 +572,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      异步上下文管理器
+      异步与多线程对比
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       最佳实践
     </span>
@@ -581,9 +590,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
-      结论
+      结语
     </span>
   </a>
   
@@ -605,11 +614,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown-guide/" class="md-nav__link">
+      <a href="../how-to-write-blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Markdown指南
+    如何写博客文章
     
   </span>
   
@@ -777,7 +786,16 @@
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      核心概念
+      什么是异步编程？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python中的异步编程
     </span>
   </a>
   
@@ -789,28 +807,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#asyncio" class="md-nav__link">
     <span class="md-ellipsis">
-      基本示例
+      asyncio 基本使用
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="基本示例">
+    <nav class="md-nav" aria-label="asyncio 基本使用">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      创建协程
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      简单的异步函数
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      并发执行多个协程
+      并发运行多个协程
     </span>
   </a>
   
@@ -822,7 +840,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       实际应用案例
     </span>
@@ -832,7 +850,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       异步网络请求
     </span>
@@ -841,7 +859,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       异步文件操作
     </span>
@@ -855,16 +873,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
-      异步上下文管理器
+      异步与多线程对比
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       最佳实践
     </span>
@@ -873,9 +891,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
-      结论
+      结语
     </span>
   </a>
   
@@ -901,51 +919,54 @@
 
 
 <h1 id="python">Python 异步编程实践</h1>
-<p>异步编程是现代 Python 开发中一个强大的工具，特别是在处理 I/O 密集型任务时。本文将介绍 Python 中的异步编程概念和实际应用。</p>
+<p>Python异步编程允许你在执行I/O操作（如网络请求、文件操作）时不阻塞主线程，从而提高程序的效率。本文将介绍Python中的异步编程基础和实践案例。</p>
 <h2 id="_1">异步编程基础</h2>
-<p>异步编程允许程序在等待某些操作完成时继续执行其他任务，而不是简单地阻塞等待。在 Python 中，<code>asyncio</code> 是标准库中提供的异步编程框架。</p>
-<h3 id="_2">核心概念</h3>
+<h3 id="_2">什么是异步编程？</h3>
+<p>异步编程是一种编程模式，它允许程序在等待I/O操作完成时继续执行其他任务，而不是一直等待直到操作完成。</p>
+<h3 id="python_1">Python中的异步编程</h3>
+<p>Python 3.5+ 提供了以下异步编程支持：</p>
 <ul>
-<li><strong>协程（Coroutines）</strong>：使用 <code>async def</code> 定义的特殊函数，可以在执行过程中暂停</li>
-<li><strong>事件循环（Event Loop）</strong>：协程执行的调度器</li>
-<li><strong>任务（Task）</strong>：是对协程的包装，表示一个正在执行的协程</li>
-<li><strong>等待（Await）</strong>：使用 <code>await</code> 关键字暂停协程执行，直到等待的操作完成</li>
+<li><code>async/await</code> 语法</li>
+<li><code>asyncio</code> 库 </li>
+<li>异步上下文管理器和迭代器</li>
 </ul>
-<h2 id="_3">基本示例</h2>
-<h3 id="_4">简单的异步函数</h3>
+<h2 id="asyncio">asyncio 基本使用</h2>
+<h3 id="_3">创建协程</h3>
 <pre><code class="language-python">import asyncio
 
 async def hello_world():
     print(&quot;Hello&quot;)
-    await asyncio.sleep(1)  # 模拟 I/O 操作
+    await asyncio.sleep(1)  # 模拟I/O操作
     print(&quot;World&quot;)
 
+# 运行协程
 asyncio.run(hello_world())
 </code></pre>
-<h3 id="_5">并发执行多个协程</h3>
+<h3 id="_4">并发运行多个协程</h3>
 <pre><code class="language-python">import asyncio
 import time
 
-async def say_after(delay, what):
+async def say(what, delay):
     await asyncio.sleep(delay)
     print(what)
 
 async def main():
-    print(f&quot;started at {time.strftime('%X')}&quot;)
+    print(f&quot;开始时间: {time.strftime('%X')}&quot;)
 
-    # 并发执行两个协程
+    # 并发运行协程
     await asyncio.gather(
-        say_after(1, 'hello'),
-        say_after(2, 'world')
+        say(&quot;任务1&quot;, 1),
+        say(&quot;任务2&quot;, 2),
+        say(&quot;任务3&quot;, 3)
     )
 
-    print(f&quot;finished at {time.strftime('%X')}&quot;)
+    print(f&quot;结束时间: {time.strftime('%X')}&quot;)
 
 asyncio.run(main())
 </code></pre>
-<h2 id="_6">实际应用案例</h2>
-<h3 id="_7">异步网络请求</h3>
-<p>使用 <code>aiohttp</code> 库进行异步 HTTP 请求：</p>
+<h2 id="_5">实际应用案例</h2>
+<h3 id="_6">异步网络请求</h3>
+<p>使用<code>aiohttp</code>库进行异步HTTP请求：</p>
 <pre><code class="language-python">import asyncio
 import aiohttp
 import time
@@ -954,106 +975,104 @@ async def fetch(session, url):
     async with session.get(url) as response:
         return await response.text()
 
-async def fetch_all(urls):
-    async with aiohttp.ClientSession() as session:
-        tasks = [fetch(session, url) for url in urls]
-        return await asyncio.gather(*tasks)
-
 async def main():
     urls = [
-        'https://api.github.com',
-        'https://api.github.com/events',
-        'https://api.github.com/repos/python/cpython'
+        &quot;https://example.com&quot;,
+        &quot;https://python.org&quot;,
+        &quot;https://github.com&quot;,
+        &quot;https://stackoverflow.com&quot;,
+        &quot;https://pypi.org&quot;
     ]
 
-    start = time.time()
-    results = await fetch_all(urls)
-    end = time.time()
+    start_time = time.time()
 
-    print(f&quot;获取了 {len(results)} 个网站，总用时: {end - start:.2f} 秒&quot;)
+    async with aiohttp.ClientSession() as session:
+        tasks = [fetch(session, url) for url in urls]
+        results = await asyncio.gather(*tasks)
+
+        for url, result in zip(urls, results):
+            print(f&quot;{url}: 获取到 {len(result)} 字节的数据&quot;)
+
+    end_time = time.time()
+    print(f&quot;总耗时: {end_time - start_time:.2f} 秒&quot;)
 
 asyncio.run(main())
 </code></pre>
-<h3 id="_8">异步文件操作</h3>
-<p>使用 <code>aiofiles</code> 库进行异步文件操作：</p>
+<h3 id="_7">异步文件操作</h3>
+<p>使用<code>aiofiles</code>库进行异步文件操作：</p>
 <pre><code class="language-python">import asyncio
 import aiofiles
 
-async def read_file(filename):
-    async with aiofiles.open(filename, 'r') as f:
+async def read_file(file_path):
+    async with aiofiles.open(file_path, mode='r') as f:
         return await f.read()
 
-async def write_file(filename, content):
-    async with aiofiles.open(filename, 'w') as f:
+async def write_file(file_path, content):
+    async with aiofiles.open(file_path, mode='w') as f:
         await f.write(content)
 
 async def main():
-    # 异步读取文件
+    # 读取文件
     content = await read_file('input.txt')
 
     # 处理内容
     processed_content = content.upper()
 
-    # 异步写入文件
+    # 写入文件
     await write_file('output.txt', processed_content)
 
     print(&quot;文件处理完成&quot;)
 
 asyncio.run(main())
 </code></pre>
-<h2 id="_9">异步上下文管理器</h2>
-<p>创建自定义异步上下文管理器：</p>
-<pre><code class="language-python">import asyncio
-
-class AsyncContextManager:
-    async def __aenter__(self):
-        print(&quot;进入异步上下文&quot;)
-        await asyncio.sleep(0.1)
-        return self
-
-    async def __aexit__(self, exc_type, exc_val, exc_tb):
-        print(&quot;退出异步上下文&quot;)
-        await asyncio.sleep(0.1)
-
-    async def do_something(self):
-        await asyncio.sleep(0.5)
-        print(&quot;在异步上下文中执行操作&quot;)
-
-async def main():
-    async with AsyncContextManager() as manager:
-        await manager.do_something()
-
-asyncio.run(main())
-</code></pre>
-<h2 id="_10">最佳实践</h2>
+<h2 id="_8">异步与多线程对比</h2>
+<p>异步编程和多线程都可以实现并发，但它们有很大区别：</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>异步编程</th>
+<th>多线程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>切换成本</td>
+<td>低</td>
+<td>高</td>
+</tr>
+<tr>
+<td>内存占用</td>
+<td>低</td>
+<td>高</td>
+</tr>
+<tr>
+<td>并行处理</td>
+<td>不支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>复杂度</td>
+<td>中等</td>
+<td>高</td>
+</tr>
+<tr>
+<td>适用场景</td>
+<td>I/O密集型</td>
+<td>CPU密集型</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_9">最佳实践</h2>
 <ol>
-<li>
-<p><strong>避免阻塞操作</strong>：在异步代码中不要使用阻塞的函数，这会阻止事件循环继续执行其他任务</p>
-</li>
-<li>
-<p><strong>使用 <code>asyncio.gather</code> 并发执行任务</strong>：当需要并行执行多个异步任务时，使用 <code>asyncio.gather</code></p>
-</li>
-<li>
-<p><strong>错误处理</strong>：使用 try/except 块捕获异步操作中的异常</p>
-</li>
+<li><strong>使用适当的库</strong>：如<code>aiohttp</code>(网络)，<code>aiofiles</code>(文件)，<code>asyncpg</code>(数据库)等</li>
+<li><strong>避免阻塞操作</strong>：在异步函数中不要使用阻塞操作，如<code>time.sleep()</code></li>
+<li><strong>合理分组任务</strong>：使用<code>asyncio.gather()</code>或<code>asyncio.TaskGroup</code>分组任务</li>
+<li><strong>使用超时控制</strong>：对可能耗时较长的操作设置超时</li>
+<li><strong>错误处理</strong>：合理处理异步操作中的异常</li>
 </ol>
-<p><code>python
-   async def main():
-       try:
-           result = await some_async_function()
-       except Exception as e:
-           print(f"发生错误: {e}")</code></p>
-<ol>
-<li><strong>超时处理</strong>：使用 <code>asyncio.wait_for</code> 添加超时机制</li>
-</ol>
-<p><code>python
-   try:
-       result = await asyncio.wait_for(some_async_function(), timeout=1.0)
-   except asyncio.TimeoutError:
-       print("操作超时")</code></p>
-<h2 id="_11">结论</h2>
-<p>Python 的异步编程范式提供了一种有效的方式处理 I/O 密集型任务，可以大幅提高程序的性能和响应速度。通过 <code>asyncio</code> 和相关的生态系统库，可以构建高效、可扩展的应用程序。</p>
-<p>要掌握异步编程，关键是理解其基本概念和最佳实践，并在实际项目中不断实践和改进。</p>
+<h2 id="_10">结语</h2>
+<p>Python异步编程在处理I/O密集型任务时非常高效，但也不是万能的。选择正确的工具来解决问题，有时候同步代码反而更简单易读。掌握异步编程思想和技巧，能帮助你写出更高效的Python程序。</p>
 
 
 
